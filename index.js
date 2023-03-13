@@ -4,6 +4,7 @@ let submitButton = document.querySelector(".button");
 let errorMessages = document.querySelectorAll(".error-message");
 let emptyfields = document.querySelectorAll(".empty-field");
 let showPasswordButton = document.querySelector(".btn");
+let visibilityOff = document.querySelector("#icon")
 
 let firstName, lastName, email, password;
 let fnTarget, lnTarget, emailTarget, pwdTarget;
@@ -118,7 +119,10 @@ showPasswordButton.addEventListener("click", (e) => {
     e.preventDefault();
     if (pwdTarget.getAttribute("type") === "text"){
         pwdTarget.setAttribute("type", "password");
+        icon.innerText = "visibility_off";
     }else{
         pwdTarget.setAttribute("type", "text");
+        icon.innerText = "visibility";
+
     }
 })
